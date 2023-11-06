@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Info from './components/Info';
+import SubscribtionButton from './components/atoms/SubscribtionButton'
+import Form from './components/Form';
 
 function App() {
+  const wrapper = {
+    margin: "0",
+    height: "100vh",
+    width: "100%",
+    boxSizing: 'border-box',
+    padding: "100px",
+    backgroundColor: '#FF7979',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={wrapper}>
+      <Info/>
+      <div>
+        <SubscribtionButton/>
+        <Form/>
+      </div>
     </div>
   );
 }
 
 export default App;
+
+
